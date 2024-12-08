@@ -1,61 +1,54 @@
-[gd_scene load_steps=18 format=3 uid="uid://bw8i8pv3c0si4"]
+[gd_scene load_steps=19 format=3 uid="uid://bw8i8pv3c0si4"]
 
 [ext_resource type="Texture2D" uid="uid://2iii50houq8y" path="res://assets/sprites/characters_modified.png" id="1_3fq4a"]
 [ext_resource type="Script" path="res://scripts/cowboy.gd" id="1_j0fk6"]
-[ext_resource type="Texture2D" uid="uid://c2xfut1n3beff" path="res://assets/sprites/Gun_Arm2-Sheet.png" id="3_ds5cp"]
-[ext_resource type="Script" path="res://scenes/arm_node.gd" id="4_dfsbg"]
+[ext_resource type="Script" path="res://scenes/arm_node.gd" id="3_00m4g"]
+[ext_resource type="Texture2D" uid="uid://c2xfut1n3beff" path="res://assets/sprites/Gun_Arm2-Sheet.png" id="3_6uhej"]
+[ext_resource type="Texture2D" uid="uid://cjsxnqsi20jnq" path="res://assets/sprites/Gun_Arm3-Sheet.png" id="5_3j3r3"]
+[ext_resource type="Script" path="res://scenes/arm_node_2.gd" id="6_nhvp6"]
+[ext_resource type="Texture2D" uid="uid://cbw5df2u5u5qy" path="res://assets/sprites/lassoTip.png" id="8_gwa1k"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hnfa6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_efdyy"]
 atlas = ExtResource("1_3fq4a")
-region = Rect2(64, 64, 32, 32)
+region = Rect2(128, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3b2oe"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_50sbq"]
 atlas = ExtResource("1_3fq4a")
-region = Rect2(128, 64, 32, 32)
+region = Rect2(256, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bafkl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ch7d"]
 atlas = ExtResource("1_3fq4a")
-region = Rect2(128, 64, 32, 32)
+region = Rect2(288, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mewgn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ero42"]
 atlas = ExtResource("1_3fq4a")
-region = Rect2(160, 64, 32, 32)
+region = Rect2(320, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8t023"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_px8eh"]
 atlas = ExtResource("1_3fq4a")
-region = Rect2(192, 64, 32, 32)
+region = Rect2(352, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kh3fs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwu5a"]
 atlas = ExtResource("1_3fq4a")
-region = Rect2(224, 64, 32, 32)
+region = Rect2(128, 96, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xkfx3"]
-load_path = "res://.godot/imported/characters_modified.png-9094eba549883514ad580d95364e042b.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8cuvt"]
-atlas = SubResource("CompressedTexture2D_xkfx3")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nd387"]
-atlas = SubResource("CompressedTexture2D_xkfx3")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y5l3p"]
-atlas = SubResource("CompressedTexture2D_xkfx3")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gvkih"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bucqq"]
 atlas = ExtResource("1_3fq4a")
-region = Rect2(96, 64, 32, 32)
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxab1"]
+atlas = ExtResource("1_3fq4a")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2xqe"]
+atlas = ExtResource("1_3fq4a")
+region = Rect2(224, 96, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3whi6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hnfa6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3b2oe")
+"texture": SubResource("AtlasTexture_efdyy")
 }],
 "loop": true,
 "name": &"idle",
@@ -63,16 +56,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bafkl")
+"texture": SubResource("AtlasTexture_50sbq")
 }, {
 "duration": 1.5,
-"texture": SubResource("AtlasTexture_mewgn")
+"texture": SubResource("AtlasTexture_4ch7d")
 }, {
 "duration": 1.5,
-"texture": SubResource("AtlasTexture_8t023")
+"texture": SubResource("AtlasTexture_ero42")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kh3fs")
+"texture": SubResource("AtlasTexture_px8eh")
 }],
 "loop": true,
 "name": &"jump",
@@ -80,16 +73,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8cuvt")
+"texture": SubResource("AtlasTexture_lwu5a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nd387")
+"texture": SubResource("AtlasTexture_bucqq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y5l3p")
+"texture": SubResource("AtlasTexture_yxab1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gvkih")
+"texture": SubResource("AtlasTexture_g2xqe")
 }],
 "loop": true,
 "name": &"walking",
@@ -99,26 +92,47 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_shcxv"]
 radius = 6.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="cowboy" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 2
 script = ExtResource("1_j0fk6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2, -14)
+position = Vector2(4, -14)
 sprite_frames = SubResource("SpriteFrames_3whi6")
 animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.422694
+frame = 3
+frame_progress = 0.487283
 
-[node name="ArmNode" type="Sprite2D" parent="."]
+[node name="ArmNode" type="Sprite2D" parent="AnimatedSprite2D"]
 unique_name_in_owner = true
-position = Vector2(-6, -6)
-texture = ExtResource("3_ds5cp")
-offset = Vector2(3, -2)
-script = ExtResource("4_dfsbg")
+position = Vector2(-4, 7)
+texture = ExtResource("3_6uhej")
+offset = Vector2(3, -1)
+script = ExtResource("3_00m4g")
+
+[node name="ArmNode2" type="Sprite2D" parent="AnimatedSprite2D"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(4, 7)
+texture = ExtResource("5_3j3r3")
+offset = Vector2(2, 0)
+script = ExtResource("6_nhvp6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(1, -7)
+position = Vector2(5, -7)
 shape = SubResource("CircleShape2D_shcxv")
+
+[node name="LassoTip" type="Sprite2D" parent="."]
+position = Vector2(5, -7)
+texture = ExtResource("8_gwa1k")
+
+[node name="LassoLine" type="Line2D" parent="."]
+top_level = true
+texture_repeat = 2
+points = PackedVector2Array(5, -7)
+width = 1.0
+default_color = Color(0.933333, 0.541176, 0.270588, 1)
+texture_mode = 1

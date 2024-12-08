@@ -1,16 +1,16 @@
 extends Sprite2D
 
-func _physics_process(_delta):
+func _physics_process(_delta: float) -> void:
 	
-	var mouse_pos = get_global_mouse_position()
-	var direction = mouse_pos
 	var arm_sprite = %ArmNode
+	var turn_check = get_parent()
+		
+	if turn_check.flip_h == false:
+		arm_sprite.visible = true
+		arm_sprite.offset.x = 3
+		arm_sprite.offset.y = -1
+		arm_sprite.position.x = -4
+		arm_sprite.look_at(get_global_mouse_position())
 	
-	arm_sprite.look_at(direction)
-	
-	var arm_direction := Input.get_axis("move_left", "move_right")
-	
-	if arm_direction > 0:
-		arm_sprite.flip_h = false
-	elif arm_direction < 0:
-		arm_sprite.flip_h = true
+	else:
+		arm_sprite.visible = false
